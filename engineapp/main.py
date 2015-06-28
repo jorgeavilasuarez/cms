@@ -15,10 +15,14 @@
 # limitations under the License.
 #
 import webapp2
+import os
+from google.appengine.ext.webapp import template
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        path = os.path.join(os.path.dirname(__file__), 'templates/index.html')
+        template_values = {}
+        self.response.out.write(template.render(path, template_values))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
