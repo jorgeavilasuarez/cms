@@ -1,0 +1,25 @@
+﻿::CONFIGURACION PARA COMPILAR EN PRODUCCION
+python "..\..\tools\scripts\itrustbuilder.py" ^
+--root="..\\..\\tools\\third_party\\closure-library\\" ^
+--root="..\\..\\loader\\" ^
+--root="..\\precompiled\\" ^
+--root="..\\js\\" ^
+--compiler_jar="..\\..\\tools\\compilers\\closure-compiler\\compiler.jar" ^
+--namespace="manager.Loader" ^
+--namespace="flights.Search" ^
+--namespace="flights.Results" ^
+--namespace="flights.Register" ^
+--compiler_flags="--define=URI_MODULES='js/'" ^
+--compiler_flags="--define=URL_SEARCH='http://www.travelcloud.com.co/site/search.ashx'" ^
+--compiler_flags="--define=URL_AVAILABILITY='http://www.travelcloud.com.co/site/availability.ashx'" ^
+--compiler_flags="--define=URL_BOOKING='http://www.travelcloud.com.co/site/booking.ashx'" ^
+--compiler_flags="--define=URL_PAY='http://payment.travelcloud.com.co/site/gateway.aspx'" ^
+--compiler_flags="--define=URL_CANCEL='http://localhost:49815/site/cancel.ashx'" ^
+--compiler_flags="--define=goog.DEBUG=false" ^
+--compiler_flags="--compilation_level=ADVANCED" ^
+--compiler_flags="--compilation_level=ADVANCED" ^
+--compiler_flags="--module_output_path_prefix='..\\www\\en\\js\\technocloud_'" ^
+--compiler_flags="--translations_file=..\translations\%1\messages.xtb" ^
+--use_renaming_map="..\\precompiled\\RENAMING_MAP_FLIGHTS.js" ^
+--output_mode="compiled" ^
+--modules_info="..\\js\\module_info.js"

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Production</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Personalización</legend>
+        <label for="background-color">Color de fondo</label>
+        <input id="background-color" type="color" />
+        <br />
+        <label for="text-color">Color del texto</label>
+        <input id="text-color" type="color" />
+        <br />
+        <button id="btnApply">Aplicar</button>
+    </fieldset>
+    <div id="Contenedor">
+        <script id="widget_app_technocloud" data-textcolor="white" data-target="technocloud" data-bgcolor="#0ca7c6" type="text/javascript">
+            !function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'http';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.async = 1;
+                    js.src = p + "://static.travelcloud.com.co/static/technocloud/flights/js/technocloud_manager.js?" + window.location.host;
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "widget_app_js_technocloud");
+
+        </script>
+
+    </div>
+    <div id="technocloud1"></div>
+    <center>
+        <textarea cols="120" rows="20" id="texScript">
+            <script id="widget_app_technocloud" data-textcolor="white" data-target="technocloud" data-bgcolor="#0ca7c6" type="text/javascript">
+                !function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'http';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.async = 1;
+                        js.src = p + "://static.travelcloud.com.co/static/technocloud/flights/js/technocloud_manager.js?" + window.location.host;
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "widget_app_js_technocloud");
+
+            </script>
+
+        </textarea>
+    </center>
+
+    <script>
+
+
+    </script>
+
+    <script type="text/javascript">
+        var changeSettings = false;
+        var btnApply = document.getElementById("btnApply");
+        var backgroundCcolor = document.getElementById("background-color");
+        var textColor = document.getElementById("text-color");
+        var texScript = document.getElementById("texScript");
+        var Contenedor = document.getElementById("Contenedor");
+
+        function onChangeSettings(evento) {
+            changeSettings = true;
+        }
+
+        btnApply.addEventListener("click", function (evento) {
+
+            if (changeSettings) {
+                var script = texScript.value.replace(/data-textcolor=\"(.*?)"/g, "data-textcolor=\"" + textColor.value + "\"");
+                script = script.replace(/data-bgcolor=\"(.*?)"/g, "data-bgcolor=\"" + backgroundCcolor.value + "\"");
+                texScript.value = script;
+                Contenedor.innerHTML = script;
+                delete window.__technocloud__;
+                eval(document.getElementById("widget_app_technocloud").innerHTML);
+            } else {
+                alert("Seleccione un color por favor.");
+            }
+
+        });
+
+
+        backgroundCcolor.addEventListener("change", onChangeSettings);
+        textColor.addEventListener("change", onChangeSettings);
+    </script>
+</body>
+</html>
