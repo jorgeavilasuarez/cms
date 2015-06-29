@@ -20,6 +20,7 @@ from google.appengine.ext import blobstore
 from google.appengine.ext import ndb
 from google.appengine.ext.webapp import blobstore_handlers
 from google.appengine.ext.webapp.util import run_wsgi_app
+from google.appengine.api import images
 
 # A custom datastore model for associating users with uploaded files.
 class UserPhoto(ndb.Model):
@@ -31,7 +32,7 @@ class UserPhoto(ndb.Model):
 class PhotoUploadFormHandler(webapp2.RequestHandler):
     def get(self):
         # [START upload_url]
-        upload_url = blobstore.create_upload_url('/upload_photo')
+        upload_url = blobstore.create_upload_url('/upload/upload_photo')
         # [END upload_url]
         # [START upload_form]
         # The method must be "POST" and enctype must be set to "multipart/form-data".
@@ -46,14 +47,21 @@ class PhotoUploadHandler(blobstore_handlers.BlobstoreUploadHandler):
     def post(self):
         try:
             upload = self.get_uploads()[0]
-            user_photo = UserPhoto(user=users.get_current_user().user_id(),
+            user = users.get_current_user()
+            user_id = 'Anonimo'
+            if not user is None:
+                user_id = users.get_current_user().user_id()
+               
+            user_photo = UserPhoto(
+                                   user=user_id,                                   
                                    blob_key=upload.key())
-            user_photo.put()
-
-            self.redirect('/view_photo/%s' % upload.key())
+            user_photo.put()            
+            url = images.get_serving_url(upload.key())
+            self.redirect(url)
+            #self.redirect('/upload/view_photo/%s' % upload.key())
 
         except:
-            self.redirect('/upload_failure.html')
+            self.redirect('/upload/upload_failure.html')
 # [END upload_handler]
 
 # [START download_handler]
@@ -66,8 +74,17 @@ class ViewPhotoHandler(blobstore_handlers.BlobstoreDownloadHandler):
 # [END download_handler]
 
 
-app = webapp2.WSGIApplication([('/', PhotoUploadFormHandler),
-                               ('/upload_photo', PhotoUploadHandler),
-                               ('/view_photo/([^/]+)?', ViewPhotoHandler),
+class ReadBlobInfo(webapp2.RequestHandler):
+    def get(self):        
+        files = blobstore.BlobInfo.all()
+        for file in files:
+            self.response.out.write(str(file.key())+'  '+file.filename + '   '+ file.content_type +' '+ str(file.creation) +'<br>');
+        
+
+
+app = webapp2.WSGIApplication([('/upload/upload_photo', PhotoUploadHandler),
+                               ('/upload/view_photo/([^/]+)?', ViewPhotoHandler),
+                               ('/upload/all', ReadBlobInfo),                               
+                               ('/upload.*', PhotoUploadFormHandler),
                               ], debug=True)
 # [END all]

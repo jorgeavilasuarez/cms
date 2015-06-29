@@ -9,9 +9,20 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /product.*
+  script: product.app
+  login: required
+
+- url: /upload.*
+  script: upload.app
+  login: required 
+  
 - url: .*
   script: main.app
+  login: required 
 
 libraries:
 - name: webapp2
   version: "2.5.2"
+- name: jinja2
+  version: "2.6"

@@ -17,13 +17,110 @@
 import webapp2
 import os
 from google.appengine.ext.webapp import template
+import webapp2
+import logging
+import pprint
+import time
+from webapp2_extras import jinja2
+from webapp2_extras import sessions
 
-class MainHandler(webapp2.RequestHandler):
+variable = 0
+
+class Foo(object):
+   bar = 'spam'
+   @webapp2.cached_property   
+   def foo(self):
+       #time.sleep(5)
+       # calculate something important here
+       logging.info( "paso en foo" )
+       return 42
+
+class BaseHandler(webapp2.RequestHandler):
+
+    @webapp2.cached_property
+    def jinja2(self):
+        logging.info( "jinja2" )        
+        # Returns a Jinja2 renderer cached in the app registry.
+        return jinja2.get_jinja2(app=self.app)
+
+    def render_response(self, _template, **context):        
+        # Renders a template and writes the result to the response.
+        rv = self.jinja2.render_template(_template, **context)
+        self.response.write(rv)
+    def dispatch(self):
+        # Get a session store for this request.
+        self.session_store = sessions.get_store(request=self.request)
+
+        try:
+            # Dispatch the request.
+            webapp2.RequestHandler.dispatch(self)
+        finally:
+            # Save all sessions.
+            self.session_store.save_sessions(self.response)
+
+    @webapp2.cached_property
+    def session(self):
+        # Returns a session using the default cookie key.
+        return self.session_store.get_session()
+    
+    @webapp2.cached_property
+    def obtenerContador(self):        
+        app = webapp2.get_app()
+        # Check if the instance is already registered.
+        contador = app.registry.get('contador')
+        if not contador:            
+            contador = 0;
+        contador+=1
+        app.registry['contador'] = contador
+        logging.info( "paso en contador : " + str(contador))
+        return contador  
+
+    @webapp2.cached_property
+    def obtenerContadorSession(self):
+        contador = self.session.get('contador')
+        if not contador:            
+            contador = 0;
+        contador+=1
+        self.session['contador'] = contador
+        logging.info( "paso en contador : " + str(contador))
+        return contador
+        
+
+class MainHandlerBase(webapp2.RequestHandler):    
+    @webapp2.cached_property
+    def obtenerContador(self):        
+        app = webapp2.get_app()
+        # Check if the instance is already registered.
+        contador = app.registry.get('contador')
+        if not contador:            
+            contador = 0;
+        contador+=1
+        app.registry['contador'] = contador
+        logging.info( "paso en contador : " + str(contador))
+        return contador  
+
+class MainHandler(BaseHandler):    
+     
     def get(self):
-        path = os.path.join(os.path.dirname(__file__), 'templates/index.html')
-        template_values = {}
-        self.response.out.write(template.render(path, template_values))
+        #var_foo = Foo()
+        #pprint.pprint("1"+str(variable))
+        #pprint.pprint("1"+str(var_foo.foo))
+        #global variable+=1
+        context = {'app': str(self.obtenerContador),
+                   'session': str(self.obtenerContadorSession)
+                  }
+        self.render_response(os.path.join(os.path.dirname(__file__), '/templates/index.html'), **context)    
+        #self.response.out.write("paso")
+        #self.response.out.write("contador: "+str(self.obtenerContador))
+        #path = os.path.join(os.path.dirname(__file__), 'templates/index.html')
+        #template_values = {}
+        #self.response.out.write(template.render(path, template_values))
 
+config = {}
+config['webapp2_extras.sessions'] = {
+    'secret_key': 'my-super-secret-key',
+}
+debug = os.environ.get('SERVER_SOFTWARE', '').startswith('Dev')
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
-], debug=True)
+], debug=debug,config=config)

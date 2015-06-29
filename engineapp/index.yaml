@@ -10,3 +10,13 @@ indexes:
 # automatically uploaded to the admin console when you next deploy
 # your application using appcfg.py.
 
+- kind: Product
+  properties:
+  - name: user_created
+  - name: image
+  - name: name
+
+- kind: Product
+  properties:
+  - name: user_created
+  - name: name
