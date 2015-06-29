@@ -32,14 +32,14 @@ class Foo(object):
    def foo(self):
        #time.sleep(5)
        # calculate something important here
-       logging.info( "paso en foo" )
+       #logging.info( "paso en foo" )
        return 42
 
 class BaseHandler(webapp2.RequestHandler):
 
     @webapp2.cached_property
     def jinja2(self):
-        logging.info( "jinja2" )        
+        #logging.info( "jinja2" )        
         # Returns a Jinja2 renderer cached in the app registry.
         return jinja2.get_jinja2(app=self.app)
 
@@ -97,19 +97,30 @@ class MainHandlerBase(webapp2.RequestHandler):
         contador+=1
         app.registry['contador'] = contador
         logging.info( "paso en contador : " + str(contador))
-        return contador  
+        return contador          
+   
 
 class MainHandler(BaseHandler):    
      
     def get(self):
+        self.response.headers["Cache-Control"] = "must-revalidate, max-age=0"
         #var_foo = Foo()
         #pprint.pprint("1"+str(variable))
         #pprint.pprint("1"+str(var_foo.foo))
         #global variable+=1
+
+        #if self.obtenerContador < 3:
         context = {'app': str(self.obtenerContador),
                    'session': str(self.obtenerContadorSession)
                   }
-        self.render_response(os.path.join(os.path.dirname(__file__), '/templates/index.html'), **context)    
+        self.render_response('index.html', **context)
+        #else:
+        #  self.response.status = "304 Not Modified"
+          # self.response.status_int = 304
+          # self.response.status_message = "Not Modified"
+          # self.response.headers["Last-Modified"] = "Mon, 29 Jun 2015 02:58:21 GMT"
+          # self.response.headers["Etag"] = "f6a7e1a4247146b370f39a0e4b702d61"
+        # return    
         #self.response.out.write("paso")
         #self.response.out.write("contador: "+str(self.obtenerContador))
         #path = os.path.join(os.path.dirname(__file__), 'templates/index.html')
@@ -122,5 +133,6 @@ config['webapp2_extras.sessions'] = {
 }
 debug = os.environ.get('SERVER_SOFTWARE', '').startswith('Dev')
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/cache', 'cache.MyApiHandler')
 ], debug=debug,config=config)
