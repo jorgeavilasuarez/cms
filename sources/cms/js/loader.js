@@ -8,7 +8,7 @@ goog.require("goog.ui.Component");
  * @constructor 
  * @extends {goog.ui.Component}
  */
-cms.Loader = function () {    
+cms.Loader = function () {
     goog.ui.Component.call(this);
 };
 
@@ -28,7 +28,7 @@ cms.Loader.prototype.createDom = function () {
  */
 cms.Loader.prototype.enterDocument = function () {
     goog.base(this, 'enterDocument');
-  
+
 };
 
 /**
@@ -44,3 +44,6 @@ cms.Loader.prototype.exitDocument = function () {
  * Registramos el modulo.
  */
 moduleManager.setLoaded('cms_loader');
+
+
+//@ sourceURL=loader.js

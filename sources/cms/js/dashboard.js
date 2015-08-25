@@ -7,8 +7,7 @@ goog.require("goog.ui.Component");
  * @constructor 
  * @extends {goog.ui.Component}
  */
-cms.Dashboard = function () {
-    // debugger;
+cms.Dashboard = function () {    
     goog.ui.Component.call(this);
 };
 
@@ -19,7 +18,8 @@ goog.inherits(cms.Dashboard, goog.ui.Component);
  * @override
  */
 cms.Dashboard.prototype.createDom = function () {
-    goog.base(this, 'createDom');
+    goog.base(this, 'createDom');    
+    this.setId("dashboard");
 };
 
 /**
@@ -44,3 +44,5 @@ cms.Dashboard.prototype.exitDocument = function () {
  * Registramos el modulo.
  */
 moduleManager.setLoaded('cms_dashboard');
+
+//@ sourceURL=dashboard.js

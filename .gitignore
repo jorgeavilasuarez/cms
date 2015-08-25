@@ -1,1 +1,3 @@
 *.pyc
+/sources/cms/nbproject/private/
+/nbproject/private/
