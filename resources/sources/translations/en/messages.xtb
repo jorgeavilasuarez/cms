@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE translationbundle>
+<translationbundle lang="en">
+  <translation id="2214224710931014659" key="MSG_1PJMEWNN40JAZ" source="..\precompiled\TPL_FLIGHTS.js" desc="Ida y Vuelta">Round trip</translation>
+  <translation id="1465556992565129109" key="MSG_RGYIQWT6NMBH" source="..\precompiled\TPL_FLIGHTS.js" desc="Solo Ida">One way</translation>
+  <translation id="1713922305199850217" key="MSG_1A3PPSSPFZJF7" source="..\precompiled\TPL_FLIGHTS.js" desc="Multiples Destinos">Multiples Destinations</translation>
+  <translation id="9115569484663672268" key="MSG_E9HCY4KCROVW" source="..\precompiled\TPL_FLIGHTS.js" desc="Origen">Origin</translation>
+  <translation id="5632010044934193733" key="MSG_153JH666V3ZS" source="..\precompiled\TPL_FLIGHTS.js" desc="Destino">Destination</translation>
+  <translation id="1035171083424629899" key="MSG_IAOXTJ6JN8J8" source="..\precompiled\TPL_FLIGHTS.js" desc="Fecha de Salida">Departure date</translation>
+  <translation id="2958169133095611078" key="MSG_EAVB9DZYGBF1" source="..\precompiled\TPL_FLIGHTS.js" desc="Fecha de Regreso">Arrival date</translation>
+  <translation id="3169667025863897930" key="MSG_YII89ZHZ5PV2" source="..\precompiled\TPL_FLIGHTS.js" desc="Adultos">Adults</translation>
+  <translation id="370133239499927817" key="MSG_9B90RMFYXFVE" source="..\precompiled\TPL_FLIGHTS.js" desc="Ninos">Children</translation>
+  <translation id="1185573088001063119" key="MSG_C646OM3VVI3" source="..\precompiled\TPL_FLIGHTS.js" desc="Infantes">Infants</translation>
+  <translation id="5896585735962137750" key="MSG_WSG31ZX6QQPP" source="..\precompiled\TPL_FLIGHTS.js" desc="anos">años</translation>
+  <translation id="6524269040224479703" key="MSG_S0WPTA2488UW" source="..\precompiled\TPL_FLIGHTS.js" desc="meses">months</translation>
+  <translation id="3523584784067742221" key="MSG_1O6EGS2MUJSS6" source="..\precompiled\TPL_FLIGHTS.js" desc="Resultados">results</translation>
+  <translation id="1111954021207316587" key="MSG_3EWFGAOLRNRZ" source="..\precompiled\TPL_FLIGHTS.js" desc="Comprar">Buy</translation>
+  <translation id="7942519290004105088" key="MSG_1BG84VX5F3F8L" source="..\precompiled\TPL_FLIGHTS.js" desc="Valor total a pagar">Total amount payable</translation>
+  <translation id="8105093398133772853" key="MSG_G6L5Z9HK73FV" source="..\precompiled\TPL_FLIGHTS.js" desc="Valor por un">Value for</translation>
+  <translation id="5365861204289967209" key="MSG_1BEON98B9KUNM" source="..\precompiled\TPL_FLIGHTS.js" desc="Adulto">Adult</translation>
+  <translation id="6067969758950871650" key="MSG_IKULIW36IRC6" source="..\precompiled\TPL_FLIGHTS.js" desc="TUS VUELOS">YOUR FLIGHTS</translation>
+  <translation id="5227152292309561420" key="MSG_AVUNP97Q8W71" source="..\precompiled\TPL_FLIGHTS.js" desc="Aerolinea">airline</translation>
+  <translation id="5491196430831725003" key="MSG_BLTM28BCRFZ" source="..\precompiled\TPL_FLIGHTS.js" desc="Hora de salida">Departure time</translation>
+  <translation id="3371771725674286643" key="MSG_V2VF9MK2SM4D" source="..\precompiled\TPL_FLIGHTS.js" desc="Hora de llegada">Check In</translation>
+  <translation id="7923185987725140394" key="MSG_1KPYXMXEARIPC" source="..\precompiled\TPL_FLIGHTS.js" desc="Vuelo">flight</translation>
+  <translation id="8467270315127777270" key="MSG_157YJJXGTKYX0" source="..\precompiled\TPL_FLIGHTS.js" desc="Impuestos incluidos">taxes included</translation>
+  <translation id="5074019915563280370" key="MSG_32215SC0U79K" source="..\precompiled\TPL_FLIGHTS.js" desc="INFORMACION DE PASAJERO">PASSENGER INFORMATION</translation>
+  <translation id="1461823281724321446" key="MSG_1CIPTK8VQMSO5" source="..\precompiled\TPL_FLIGHTS.js" desc="Datos obligatorios">required data</translation>
+  <translation id="4754764346149673259" key="MSG_1GKFSCAAMSN44" source="..\precompiled\TPL_FLIGHTS.js" desc="Telefono Fijo">Landline</translation>
+  <translation id="792672694347544894" key="MSG_16ZNL9FE3PUA6" source="..\precompiled\TPL_FLIGHTS.js" desc="Ciudad">city</translation>
+  <translation id="9057396179540678870" key="MSG_A7AWXWRCOVAZ" source="..\precompiled\TPL_FLIGHTS.js" desc="Celular">cell phone</translation>
+  <translation id="7100749285606232499" key="MSG_1JTB5K90Y48B5" source="..\precompiled\TPL_FLIGHTS.js" desc="Politica de tuagencia S.A. para el tratamiento de informacion de los usuarios">Your agency policy S.A. to treat user information</translation>
+  <translation id="8661258298002339777" key="MSG_MS76MXG1WBR3" source="..\precompiled\TPL_FLIGHTS.js" desc="Nombres">First Name</translation>
+  <translation id="8681840261726830699" key="MSG_1N3YX4ZKAVM19" source="..\precompiled\TPL_FLIGHTS.js" desc="Nombres">Last Name</translation>
+  <translation id="3730704594178079573" key="MSG_18IBB6TRZSG22" source="..\precompiled\TPL_FLIGHTS.js" desc="Fecha nacimiento">Birth date</translation>
+  <translation id="3947724729563813576" key="MSG_1A92KC5NNWXIG" source="..\precompiled\TPL_FLIGHTS.js" desc="Masculino">Male</translation>
+  <translation id="6300183090638463659" key="MSG_17MN9YTUSCV1J" source="..\precompiled\TPL_FLIGHTS.js" desc="Femenino">Female</translation>
+  <translation id="676626477589796295" key="MSG_1KSRZC9MFMCSC" source="..\precompiled\TPL_FLIGHTS.js" desc="Tipo documento">Documento Type</translation>
+  <translation id="8268745272989571568" key="MSG_1ICHWP8EZ1DE3" source="..\precompiled\TPL_FLIGHTS.js" desc="Cedula Ciudadania">Citizenship Identity Card</translation>
+  <translation id="7254173974407513874" key="MSG_IZ9CVGRXC6AC" source="..\precompiled\TPL_FLIGHTS.js" desc="Pasaporte">Passport</translation>
+  <translation id="22226108180063883" key="MSG_1BUAP3RFVPZYS" source="..\precompiled\TPL_FLIGHTS.js" desc="Registro Civil">Civil Registry</translation>
+  <translation id="3617933338592034420" key="MSG_YUH2IL3ZZ3V3" source="..\precompiled\TPL_FLIGHTS.js" desc="Tarjeta de identidad">Identity card</translation>
+  <translation id="2908682769040138181" key="MSG_1BJBMMSC0BCSK" source="..\precompiled\TPL_FLIGHTS.js" desc="NIUP">NIUP</translation>
+  <translation id="125810136874045966" key="MSG_Q78WYZMRQ0LI" source="..\precompiled\TPL_FLIGHTS.js" desc="No.documento">Document number</translation>
+  <translation id="392025368118899655" key="MSG_S3L35BGK7KKP" source="..\precompiled\TPL_FLIGHTS.js" desc="Pasajero frecuente">frequent Flyer</translation>
+  <translation id="3159323225868696170" key="MSG_82RX5G3RBIRL" source="..\precompiled\TPL_FLIGHTS.js" desc="Volver a buscar">search again</translation>
+  <translation id="1703958640870567642" key="MSG_1U82AAWJNR9ZD" source="..\precompiled\TPL_FLIGHTS.js" desc="Solicitar">request</translation>
+  <translation id="4299216693455995694" key="MSG_1LXOKNRYDX1Z7" source="..\precompiled\TPL_FLIGHTS.js" desc="Filtros Activos">Active filters</translation>
+  <translation id="809733713639455683" key="MSG_O87TQJIX2UZ5" source="..\precompiled\TPL_FLIGHTS.js" desc="Precio por adulto">Value for Adult</translation>
+  <translation id="7590609446026710725" key="MSG_1CS5PBN2I9XVI" source="..\precompiled\TPL_FLIGHTS.js" desc="Seleccionar">select</translation>
+  <translation id="4179923772758362498" key="MSG_125IGZYH73NI" source="..\precompiled\TPL_FLIGHTS.js" desc="Otro">Other</translation>
+  <translation id="1612996642125599984" key="MSG_EZZJ81ALWFDY" source="..\precompiled\TPL_FLIGHTS.js" desc="Vuelta">return</translation>
+  <translation id="7133931548295742724" key="MSG_1K3JBGCP94CN9" source="..\precompiled\TPL_FLIGHTS.js" desc="Ida">departure</translation>
+  <translation id="7532751303358380975" key="MSG_3QPMGT9XAO7Z" source="..\precompiled\TPL_FLIGHTS.js" desc="Sale">depart</translation>
+  <translation id="7381230078434529026" key="MSG_74CGTSYLD76W" source="..\precompiled\TPL_FLIGHTS.js" desc="Llega">arrive</translation>
+  <translation id="6938703478648335615" key="MSG_1MJX4YMU1MM3T" source="..\precompiled\TPL_FLIGHTS.js" desc="Duracion">Duration</translation>
+  <translation id="5723698282160270229" key="MSG_1NJPBJDRGVTB3" source="..\precompiled\TPL_FLIGHTS.js" desc="Tarifa">rate</translation>
+  <translation id="7284191516418697594" key="MSG_1VVZ0FEC5A71F" source="..\precompiled\TPL_FLIGHTS.js" desc="Iva de la tarifa">VAT rate</translation>
+  <translation id="4884802249443170370" key="MSG_3FS8QASX7DXC" source="..\precompiled\TPL_FLIGHTS.js" desc="Iva Tarifa Administrativa">VAT Administrative Fee</translation>
+  <translation id="1042943998835410445" key="MSG_2XHAHC7VWOKZ" source="..\precompiled\TPL_FLIGHTS.js" desc="Tasa Aeroportuaria">Airport Tax</translation>
+  <translation id="2267938383392758562" key="MSG_1WPIU5EVAAAY3" source="..\precompiled\TPL_FLIGHTS.js" desc="Otros impuestos">other taxes</translation>
+  <translation id="6249400300711819808" key="MSG_FZAW59E727EA" source="..\precompiled\TPL_FLIGHTS.js" desc="Detalle del Vuelo">Flight Details</translation>
+  <translation id="2404848313580990531" key="MSG_AGTZY2UWNUGO" source="..\precompiled\TPL_FLIGHTS.js" desc="Paradas">stops</translation>
+  <translation id="4084800196164796700" key="MSG_1086AOSXTWOU6" source="..\precompiled\TPL_FLIGHTS.js" desc="SinParada">without stop</translation>
+  <translation id="6016135548689039932" key="MSG_MVKOTYE97M2T" source="..\precompiled\TPL_FLIGHTS.js" desc="Tiempo de vuelo">Flight Time</translation>
+  <translation id="5690505381189574883" key="MSG_10JFOXKP7AVGT" source="..\precompiled\TPL_FLIGHTS.js" desc="Sale de">leaves</translation>
+  <translation id="9178118138234934276" key="MSG_EJSZS3TG9MCS" source="..\precompiled\TPL_FLIGHTS.js" desc="Llega a">reaches</translation>
+  <translation id="4639262551063580096" key="MSG_1VL9YEE8F7CMB" source="..\precompiled\TPL_FLIGHTS.js" desc="Horarios en hora local de cada ciudad">Timetables in local time for each city</translation>
+  <translation id="8726093288941350466" key="MSG_6W1KZ38GC5ND" source="..\precompiled\TPL_FLIGHTS.js" desc="Ninos">Children</translation>
+  <translation id="2927740292883035863" key="MSG_1LTRMHPTQUPTP" source="..\precompiled\TPL_FLIGHTS.js" desc="iniciar busqueda">Get Results</translation>
+  <translation id="5281106049058421284" key="MSG_WPGSAN5AO07Y" source="..\precompiled\TPL_FLIGHTS.js" desc="Ciudad de Origen">origin city</translation>
+  <translation id="3222147270676335483" key="MSG_2C70X30E26J" source="..\precompiled\TPL_FLIGHTS.js" desc="Ciudad de Destino">destination city</translation>
+  <translation id="3459782712376593624" key="MSG_6N2CAS9196Q1" source="..\precompiled\TPL_FLIGHTS.js" desc="anios">years</translation>
+  <translation id="8456742316469037785" key="MSG_XLPI47GC40F9" source="..\precompiled\TPL_FLIGHTS.js" desc="INFORMACION DE PASAJERO">PASSENGER INFORMATION</translation>
+  <translation id="8303112554575477606" key="MSG_1356FCQ5L9OYB" source="..\precompiled\TPL_FLIGHTS.js" desc="Confirmo datos de los pasajeros y acepto los terminos y condiciones de reserva y tarifas">Passenger data confirm and accept the terms and conditions of booking and rates</translation>
+  <translation id="493442930421983804" key="MSG_1GQG883923E0O" source="..\precompiled\TPL_FLIGHTS.js" desc="RESERVAR">BOOK</translation>
+  <translation id="2284470242762963503" key="MSG_T6JWMFWE0D4M" source="..\precompiled\TPL_FLIGHTS.js" desc="DATOS DE CONTACTO">CONTACT INFORMATION</translation>
+  <translation id="2386326141258565411" key="MSG_MGBOG2BCODU5" source="..\precompiled\TPL_FLIGHTS.js" desc="Condiciones de la reserva y tarifa">Booking conditions and rate</translation>
+  <translation id="4979419857565644552" key="MSG_1B9T3W16173GS" source="..\precompiled\TPL_FLIGHTS.js" desc="Correo electronico">email Address</translation>
+  <translation id="6888053222192759578" key="MSG_1CVD5WDR6Q9ZH" source="..\precompiled\TPL_FLIGHTS.js" desc="Genero">Genre</translation>
+  <translation id="8211971423986941726" key="MSG_OQKGII5M3X12" source="..\precompiled\TPL_FLIGHTS.js" desc="Volver a resultados">Return to results</translation>
+  <translation id="784350596782064403" key="MSG_UNNAMED_SELECCIONE_DESTINOS_DIFERENTES" source="..\js\search.js" desc="Seleccione destinos diferentes">Select different destinations</translation>
+  <translation id="6820359513346790212" key="MSG_UNNAMED_LA_FECHA_DE_REGRESO_NO_PUEDE_SER_MENOR" source="..\js\search.js" desc="La fecha de regreso no puede ser menor">The return date can not be less</translation>
+  <translation id="2384307679340309480" key="MSG_UNNAMED_ADULT" source="..\js\search.js" desc="Adulto">Adult</translation>
+  <translation id="8475735896145952114" key="MSG_UNNAMED_NINOS" source="..\js\search.js" desc="Ninos">children</translation>
+  <translation id="2148113854174445930" key="MSG_UNNAMED_INFANTS" source="..\js\search.js" desc="Infantes">Infants</translation>
+  <translation id="3958469452415289283" key="MSG_UNNAMED_INTENTE" source="..\js\search.js" desc="itente">No results were found for the search try again</translation>
+  <translation id="1390328922098697577" key="MSG_UNNAMED_ERROR" source="..\js\search.js" desc="MSG_UNNAMED_ERROR">Connection Error</translation>
+  <translation id="1408716812966774358" key="MSG_C8YQ10K1UXR5" source="..\precompiled\TPL_FLIGHTS.js" desc="Nino">child</translation>
+  <translation id="3345959224152824223" key="MSG_O6PV7PDLWLE3" source="..\precompiled\TPL_FLIGHTS.js" desc="Infante">Infant</translation>
+  <translation id="3350904330395590237" key="MSG_UNNAMED_DESDE" source="..\js\results.js" desc="DESDE">FROM</translation>
+  <translation id="7210540880505211606" key="MSG_UNNAMED_HASTA" source="..\js\results.js" desc="HASTA">TO</translation>
+  <translation id="4237409837312747659" key="MSG_UNNAMED_PRECIOS" source="..\js\results.js" desc="Precios">Prices</translation>
+  <translation id="4862765818605373091" key="MSG_UNNAMED_AEROLINEAS" source="..\js\results.js" desc="Aerolineas">Airlines</translation>
+  <translation id="7095211336938538953" key="MSG_UNNAMED_ESCALAS" source="..\js\results.js" desc="Escalas">stops</translation>
+  <translation id="1612602787990552272" key="MSG_UNNAMED_HORARIO_DE_LEGADA" source="..\js\results.js" desc="Horario de llegada">Arrival time</translation>
+  <translation id="5703015871854370131" key="MSG_UNNAMED_HORARIO_DE_SALIDA" source="..\js\results.js" desc="Horario de salida">Departure time</translation>
+  <translation id="5707212141331352973" key="MSG_UNNAMED_AEROPUERTOS_DE_SALIDA" source="..\js\results.js" desc="Aeropuertos de salida">Arrival Airports</translation>
+  <translation id="9008388969732376645" key="MSG_UNNAMED_AEROPUERTOS_DE_LLEGADA" source="..\js\results.js" desc="Aeropuertos de llegada">Departure Airports</translation>
+  <translation id="4787288532264412224" key="MSG_UNNAMED_AEROPUERTOS_DE_CLASES" source="..\js\results.js" desc="Clases">Class</translation>
+  <translation id="1194198545429104009" key="MSG_UNNAMED_PRIMERA_PREMIUN" source="..\js\results.js" desc="Primera Premium">First  Premium</translation>
+  <translation id="5726058457516818733" key="MSG_UNNAMED_PRIMERA" source="..\js\results.js" desc="Primera">First</translation>
+  <translation id="6927073284537336035" key="MSG_UNNAMED_NEGOCIOS_PREMIUN" source="..\js\results.js" desc="Negocios Premium">Premium business</translation>
+  <translation id="4315800094352599997" key="MSG_UNNAMED_ECONOMICA_PREMIUN" source="..\js\results.js" desc="Economica Premium">Economic Premium</translation>
+  <translation id="4501705503359216515" key="MSG_UNNAMED_ECONOMICA" source="..\js\results.js" desc="Economica">Economic</translation>
+	<translation id="2345773594556465699" key="MSG_PVZDWOE6JPOC" source="..\precompiled\TPL_FLIGHTS.js" desc="Filtrar">Filter</translation>
+	<translation id="372558547959857236" key="MSG_AZL5OKHYC0TJ" source="..\precompiled\TPL_FLIGHTS.js" desc="Remover Filtro">Remove Filter</translation>
+	<translation id="4173810169389520540" key="MSG_BXRDK79AOV2V" source="..\precompiled\TPL_FLIGHTS.js" desc="Todas las">All</translation>
+	<translation id="5049136919254457965" key="MSG_S5U8T2FCKK1Q" source="..\precompiled\TPL_FLIGHTS.js" desc="A">TO</translation>
+	<translation id="1896182454189029785" key="MSG_1BY4XQR8TCEBZ" source="..\precompiled\TPL_FLIGHTS.js" desc="Duracion">Duration</translation>
+	<translation id="7284332056109918524" key="MSG_UNNAMED_PARADA" source="..\js\results.js" desc="Parada">Stop</translation>
+	<translation id="6181322702956711950" key="MSG_UNNAMED_DIRECTO" source="..\js\results.js" desc="Directo">Direct</translation>
+	<translation id="8667787437766479330" key="MSG_XMN7DXN48SQ2" source="..\precompiled\TPL_FLIGHTS.js" desc="Pagar">Pay</translation>
+	<translation id="5091367671581215104" key="MSG_R3DMPOL4YJRT" source="..\precompiled\TPL_FLIGHTS.js" desc="Cancelar">Cancel</translation>
+	<translation id="3650397391099612054" key="MSG_UNNAMED_TERMINOS_CONDICIONES" source="..\js\register.js" desc="Debe aceptar los terminos y condiciones">You must accept the Terms and Conditions</translation>
+	<translation id="4702943436316418874" key="MSG_UNNAMED_SU_RESERVA_FUE_CONFIRMADA_CON_EL_RECORD" source="..\js\register.js" desc="Su reserva fue confirmada con el record">Your reservation was confirmed with the record</translation>
+	<translation id="1102282511513947399" key="MSG_UNNAMED_RESERVA_CANCELADA" source="..\js\register.js" desc="Reserva cancelada">reservation canceled</translation>
+	<translation id="6456151010227300595" key="MSG_3YGBJBADLEKQ" source="..\precompiled\TPL_FLIGHTS.js" desc="Tarifa Administrativa">Administrative fee</translation>
+</translationbundle>
