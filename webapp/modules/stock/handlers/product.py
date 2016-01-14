@@ -15,33 +15,17 @@
 # limitations under the License.
 #
 import webapp2
-import os
-from google.appengine.api import users
 from google.appengine.ext.webapp import template
-from logic.product import ProductLogic
-import json
+from modules.stock.model.product import Product
+from modules.stock.model.productImage import ProductImage
 
-class ProductHandler(webapp2.RequestHandler):
-    def get(self):
-        # prd = product.Product()
-        # prd.name = "test"
-        # prd.description = "description"
-        # prd.price = 1445646
-        # prd.count = 20
-        # prd.put()
-        path = os.path.join(os.path.dirname(__file__), 'templates/index.html')
-        user_id = users.get_current_user()
-        template_values = ProductLogic.get_products_by_user_key(user_id);
-        for prd in template_values:
-           #self.response.out.write(prd.key.urlsafe())
-           self.response.out.write(json.dumps(prd.to_dict(exclude=['user_created','user_modified','date_created','date_modified']),sort_keys=True))
-           #self.response.out.write(template.render(path, template_values))
 
-    def post(self):
-        path = os.path.join(os.path.dirname(__file__), 'templates/index.html')
+class ProductHandler(webapp2.RequestHandler):    
+     
+    def get(self):           
+        template_values = {'products': Product.get_products()} 
+        self.response.out.write(template.render('modules/stock/templates/index.html', template_values))
+        
+    def post(self):                
         template_values = {}
-        self.response.out.write(template.render(path, template_values))
-
-app = webapp2.WSGIApplication([
-    ('/product', ProductHandler)
-], debug=True)
+        self.response.out.write(template.render('modules/stock/templates/index.html', template_values))

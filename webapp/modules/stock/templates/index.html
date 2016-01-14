@@ -1,0 +1,73 @@
+{% extends "base.html" %} 
+
+{% block title %}Inventarios{% endblock %}
+
+{% block menuTitle %} Inventarios {% endblock %}
+
+{% block menuOptions %}
+<a href="/product/new">Agregar producto</a>
+{% endblock %} 
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Código
+                    </th>
+                    <th>
+                        Descripción
+                    </th>                    
+                    <th>
+                        Fecha creación
+                    </th>
+                    <th>
+                        Fecha modificación
+                    </th>
+                    <th>
+                        usuario creo
+                    </th>
+                    <th>
+                        usuario modifico
+                    </th>
+                    <th>
+                        Acciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>
+                        {{product.name}}
+                    </td>
+                    <td>
+                        {{product.description}}
+                    </td>                    
+                    <td>
+                        {{product.date_created}}
+                    </td>
+                    <td>
+                        {{product.date_modified}}
+                    </td>
+                    <td>
+                        {{product.user_created}}
+                    </td>
+                    <td>
+                        {{product.user_modified}}
+                    </td>
+                    <td>
+                        <a class="btn btn-default" href="/product/edit/{{product.key.urlsafe}}">Modificar</a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+    </div>
+</div>
+{% endblock %}

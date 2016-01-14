@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}list{% endblock %}
+
+{% block search %}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h3>Alquiler de carros</h3>
+        <form>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="exampleInputPassword1">Ciudad de alquiler</label>
+                        <input type="datetime" class="form-control" id="exampleInputPassword1" placeholder="dd-mm-aaaa">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="exampleInputPassword1">Ciudad de devolucion</label>
+                        <input type="datetime" class="form-control" id="exampleInputPassword1" placeholder="dd-mm-aaaa">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="exampleInputPassword1">Inicio</label>
+                        <input type="datetime" class="form-control" id="exampleInputPassword1" placeholder="dd-mm-aaaa">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="exampleInputPassword1">Finalizacion</label>
+                        <input type="datetime" class="form-control" id="exampleInputPassword1" placeholder="dd-mm-aaaa">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4"></div>
+                    <div class="col-xs-6 col-sm-4"></div>
+                    <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                    <div class="clearfix visible-xs-block"></div>
+                    <div class="col-xs-6 col-sm-4"><button type="submit" class="btn btn-default">Buscar</button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

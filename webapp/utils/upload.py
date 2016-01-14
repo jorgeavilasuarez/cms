@@ -22,12 +22,22 @@ from google.appengine.ext.webapp import blobstore_handlers
 from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.api import images
 
-# A custom datastore model for associating users with uploaded files.
-class UserPhoto(ndb.Model):
-  user = ndb.StringProperty()
-  # blob_key = blobstore.BlobReferenceProperty()
-  blob_key = ndb.BlobKeyProperty()
+class Image(ndb.Model):
+    user = ndb.StringProperty()    
+    blob_key = ndb.BlobKeyProperty()
+    date_created = ndb.DateTimeProperty(auto_now_add=True)
+    date_modified = ndb.DateTimeProperty(auto_now=True)
+    user_created = ndb.UserProperty(auto_current_user_add=True)
+    user_modified = ndb.UserProperty(auto_current_user=True)
+    is_publish = ndb.BooleanProperty(default=False)
+    is_deleted = ndb.BooleanProperty(default=False)
+    
+    @classmethod
+    def get_images(cls):
+        return cls.query().order(cls.date_created).fetch()
+    
 
+# A custom datastore model for associating users with uploaded files.
 
 class PhotoUploadFormHandler(webapp2.RequestHandler):
     def get(self):
@@ -52,13 +62,13 @@ class PhotoUploadHandler(blobstore_handlers.BlobstoreUploadHandler):
             if not user is None:
                 user_id = users.get_current_user().user_id()
                
-            user_photo = UserPhoto(
+            user_photo = Image(
                                    user=user_id,                                   
                                    blob_key=upload.key())
             user_photo.put()            
             url = images.get_serving_url(upload.key())
-            self.redirect(url)
-            #self.redirect('/upload/view_photo/%s' % upload.key())
+            self.redirect('/images')
+            #self.redirect('/images/view_photo/%s' % upload.key())
 
         except:
             self.redirect('/upload/upload_failure.html')

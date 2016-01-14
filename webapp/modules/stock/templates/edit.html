@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}editar{% endblock %}
+
+{% block menuOptions %}
+<a href="/product/new">Agregar imagen</a>
+<a href="/product/new">Deshabilitar</a>
+<a href="/product/">Cerrar</a>
+
+{% endblock %}
+
+{% block content %}        
+
+     
+     <div class="row">
+    <div class="col-sm-12">
+        
+    <form action="/product/edit/{{product.key.urlsafe}}" method="post">   
+         
+         
+        <div class="form-group">
+            <label for="name">nombre</label>
+            <input required="" value="{{product.name}}"  class="form-control" type="text" name="name" id="name"/>
+        </div>
+        <div class="form-group">
+            <label for="description">descripcion</label>
+            <input  required="" value="{{product.description}}" class="form-control" type="text" name="description" id="description"/>
+        </div>        
+        
+         <div class="form-group">            
+            <input  class="btn-primary" type="submit" name="save" id="save" value="guardar"/>
+        </div>
+        
+    </form>
+
+    </div>
+</div>
+     
+{% endblock %}
+

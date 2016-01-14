@@ -4,19 +4,35 @@ runtime: python27
 api_version: 1
 threadsafe: yes
 
+
 handlers:
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
+  
+- url: /fonts/(.*\.(woff))$
+  static_files: fonts/\1
+  upload: fonts/.*\.(woff)$
+  http_headers:
+    Content-Type: application/woff
+  
+- url: /static
+  static_dir: static
+  http_headers:
+    Access-Control-Allow-Origin: "*"
 
 - url: /product.*
-  script: product.app
+  script: modules.stock.main.app
+  login: required
+  
+- url: /images.*
+  script: modules.images.main.app
   login: required
 
 - url: /upload.*
-  script: upload.app
+  script: utils.upload.app
   login: required 
-  
+
 - url: .*
   script: main.app
   login: required 

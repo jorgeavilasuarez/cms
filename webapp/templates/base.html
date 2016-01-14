@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}index{% endblock %}</title>
+    <link rel="stylesheet" href="/static/sources/third_party/closure-library/closure/goog/css/tabbar.css">
+    <link rel="stylesheet" href="/static/sources/third_party/closure-library/closure/goog/css/tab.css">
+
+    <link rel="stylesheet" href="/static/sources/third_party/closure-library/closure/goog/css/menu.css">
+    <link rel="stylesheet" href="/static/sources/third_party/closure-library/closure/goog/css/menuitem.css">
+    <link rel="stylesheet" href="/static/sources/third_party/closure-library/closure/goog/css/menuseparator.css">
+    <link rel="stylesheet" href="/static/sources/third_party/closure-library/closure/goog/css/toolbar.css">
+    <link rel="stylesheet" href="/static/sources/third_party/closure-library/closure/goog/css/common.css">
+    
+
+</head>
+
+<body class="sidebar-mini skin-green-light">
+
+
+    <script type="text/javascript" src="/static/jQuery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        CLOSURE_BASE_PATH = '/static/sources/';
+    </script>
+
+    <script type="text/javascript" src="/static/sources/third_party/closure-library/closure/goog/base.js"></script>
+
+    <script type="text/javascript">
+        $.ajaxSetup({
+            cache: true,
+            async: false
+        });
+        goog.global.CLOSURE_IMPORT_SCRIPT = function (src) {
+            $.getScript(src, function (data, dos, tres) {
+                try {
+                    console.log(src);
+                } catch (e) {
+                }
+            });
+        }
+    </script>
+
+    <script type="text/javascript" src="/static/sources/js/main/app.js"></script>
+    <script type="text/javascript">
+        var app = new officeErp.App();
+       app.render();
+    </script>
+</body>
+
+</html>
